@@ -1,4 +1,4 @@
-# download-salvager
+# download-refinder
 
 ## Disclaimer
 

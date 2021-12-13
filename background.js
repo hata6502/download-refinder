@@ -137,32 +137,6 @@ ${filesize(downloadItem.fileSize)}
 
 const getThumbnailURL = async ({ downloadItem }) => {
   try {
-    try {
-      if (
-        [
-          "image/png",
-          "image/jpeg",
-          "image/gif",
-          "image/heic",
-          "image/heif",
-        ].includes(downloadItem.mime) &&
-        downloadItem.fileSize < 2 * 1024 * 1024
-      ) {
-        const imageResponse = await fetch(downloadItem.url);
-
-        if (!imageResponse.ok) {
-          throw new Error(imageResponse.statusText);
-        }
-
-        const thumbnailURL = URL.createObjectURL(await imageResponse.blob());
-
-        // TODO: URL.revokeObjectURL(thumbnailURL);
-        return thumbnailURL;
-      }
-    } catch (exception) {
-      console.error(exception);
-    }
-
     const anyThumbnailResponse = await fetch(
       "https://af36atuifd.execute-api.us-east-1.amazonaws.com/default/any-thumbnail",
       {
