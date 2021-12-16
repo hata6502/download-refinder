@@ -8,6 +8,7 @@
   },
   "options_page": "options.html",
   "permissions": [
+    "bookmarks",
     "downloads",
     "storage",
     "https://af36atuifd.execute-api.us-east-1.amazonaws.com/default/any-thumbnail"
