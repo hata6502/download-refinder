@@ -1,4 +1,4 @@
-# download-refinder
+# web-refinder
 
 ## Disclaimer
 

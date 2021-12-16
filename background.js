@@ -103,7 +103,7 @@ chrome.downloads.onChanged.addListener(async ({ id, ...downloadItemDelta }) => {
           }
 
           formData.append("access_token", gyazoAccessToken);
-          formData.append("app", "Download Refinder");
+          formData.append("app", "Web Refinder");
           formData.append("imagedata", canvasBlob);
           formData.append("referer_url", downloadItem.url);
 
